@@ -1,0 +1,312 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
+.wrapper-container {
+    background-image: url(./images/bgbg.jpeg);
+    background-size: cover;
+}
+
+
+.left-box {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 1s ease, transform 1s ease;
+    padding: 35px 35px;
+    /* height: fit-content; */
+    z-index: 100;
+}
+
+.left-box.increaseH {
+    padding: 140px 35px;
+    transition: padding 1.5s ease;
+
+
+}
+
+.left-box.loadIn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+.main-logo {
+    width: 160px;
+    z-index: 90;
+    opacity: 0;
+    transform: scale(0) translateY(-1050%);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    position: relative;
+
+}
+
+.main-logo.loadIn {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.text-logo {
+    width: 170px;
+    margin-top: 20px;
+    z-index: 70;
+    opacity: 0;
+    transform: scale(0) translateY(-1000%);
+    transition: opacity 1.5s ease, transform 2s ease;
+
+    position: relative;
+
+}
+
+.text-logo.loadIn {
+
+    opacity: 1;
+    transform: scale(1) translateY(0);
+
+
+}
+
+
+.form-container {
+    background-color: rgb(32, 64, 140, 0.95);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 1.5s ease, transform 1.5s ease, width 1.5s ease, height 0.8s ease;
+    z-index: 40;
+
+
+}
+
+
+.form-container.loadIn {
+    width: 350px;
+
+    height: 434.562px;
+    opacity: 1;
+    transform: translateX(0);
+
+
+}
+
+.form-container.loadIn.expanded {
+    width: 500px;
+}
+
+
+
+.form-head {
+    opacity: 0;
+    transform: translateX(-200px);
+
+}
+
+.form-head.loadIn {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 2.8s ease, transform 1.5s ease;
+
+}
+
+
+
+.num-box,
+.pass-box,
+.cap-box,
+.btn-box,
+.reg-tag {
+    width: 0;
+    opacity: 0;
+    transform: translateX(-200px);
+
+}
+
+
+
+.num-box.loadIn,
+.pass-box.loadIn,
+.cap-box.loadIn,
+.btn-box.loadIn,
+.reg-tag.loadIn {
+    width: 80%;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 2.8s ease, transform 1s ease, width 0.1s ease;
+}
+
+.num-in,
+.pass-in,
+.cap-in {
+    background: inherit;
+    border-bottom: 0.8px solid #C7C8CC;
+    padding-bottom: 5px;
+    color: white;
+}
+
+
+
+
+
+input:focus {
+    border-bottom: 2px solid white;
+    outline: none;
+ 
+}
+
+input:hover {
+    border-bottom: 2px solid white;
+    outline: none;
+   
+}
+
+
+.cap-img {
+    background-image: url('./images/captcha-img.png');
+    background-size: cover;
+    transform: scale(0);
+    opacity: 0;
+
+}
+
+
+.cap-img.loadIn {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.reg-tag:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in;
+}
+
+
+.formFlex {
+    /* transform: translateX(-1050px); */
+}
+
+.num-otp-box {
+    /* transform: translateX(-350px); */
+}
+
+
+.login-page {
+    width: 350px;
+    flex: 0 0 350px;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 640px) {
+
+    .form-container.loadIn.expanded {
+        width: 350px;
+        height: 500px;
+    }
+
+
+   
+
+
+    .left-box {
+        padding: 20px 10px;
+    }
+
+
+    .left-box.increaseH {
+        padding: 10px 35px;
+        transition: padding 1.5s ease;
+
+
+    }
+
+    .main-logo {
+        width: 150px;
+    }
+
+    .main-logo {
+        width: 260px;
+        z-index: 90;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 1.5s ease, transform 1.5s ease, width 1.5s ease;
+        position: relative;
+
+    }
+
+    .main-logo.zoomOut {
+        width: 100px;
+    }
+
+    .main-logo.loadIn {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    .text-logo {
+        width: 0;
+        margin-top: 0;
+        z-index: 70;
+        opacity: 0;
+        transform: scale(0) translateX(-1000%);
+        transition: opacity 1.5s ease, transform 0.5s ease, width 1.5s ease;
+
+        position: relative;
+
+    }
+
+    .text-logo.loadIn {
+        width: 170px;
+        opacity: 1;
+        transform: scale(1) translateY(0);
+
+
+    }
+
+
+    .form-container {
+        background-color: rgb(32, 64, 140, 0.95);
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transform: translateY(-200px);
+        transition: opacity 1.5s ease, transform 1.5s ease, width 0.1s ease, height 1.5s ease;
+        z-index: 40;
+
+
+    }
+
+
+    .form-container.loadIn {
+        width: 350px;
+
+        height: 434.562px;
+        opacity: 1;
+        transform: translateY(0);
+
+
+    }
+}
